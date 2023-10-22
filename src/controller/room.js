@@ -1,3 +1,4 @@
+//create empty array
 const room=[];
 
 //get all rooms details
