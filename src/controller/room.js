@@ -1,5 +1,6 @@
 const room=[];
 
+//get all rooms details
 const getRooms=(req,res)=>{
           
        res.status(200).send({
@@ -7,7 +8,8 @@ const getRooms=(req,res)=>{
            room
        })
 }
- 
+
+//create a room
 const createRooms=(req,res)=>{
        try {
             let roomID= room.find((roomItem)=>roomItem.room_ID === req.body.room_ID)
@@ -42,6 +44,7 @@ const createRooms=(req,res)=>{
        
 }
 
+//booking a room
 const bookingRoom =(req,res)=>{
          try {
             let roomID= room.find((roomItem)=>roomItem.room_ID === req.body.room_ID)
@@ -81,6 +84,7 @@ const bookingRoom =(req,res)=>{
            
   }
 
+//List All rooms with booked Details
   const bookedRoomDetails=(req,res)=>{
       
          try {
@@ -115,6 +119,7 @@ const bookingRoom =(req,res)=>{
 
   }
  
+// List All customer Booking Details
   const customerBookedDetails=(req,res)=>{
           
          try {
@@ -149,7 +154,7 @@ const bookingRoom =(req,res)=>{
               })
          }
   }
-  
+  //List all customer booking counts
   const customerBookingCount=(req,res)=>{
           let customercounts=[];
           let counts=0;
